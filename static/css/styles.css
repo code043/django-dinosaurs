@@ -1,3 +1,7 @@
-body {
-  background-color: brown;
+.container{
+  display: flex;
+  justify-content: center;
+}
+.container h1{
+  text-align: center;
 }
