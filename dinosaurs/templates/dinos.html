@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+<link href="{% static 'css/styles.css' %}" rel="stylesheet">
+{% block content %}
+
+<div class="container">
+<h1>Dino List</h1>
+<div class="list">
+  <ul>
+    {% for dino in dinos %}
+    <li>
+      <div >
+        <h1>{{ dino.name }}</h1>
+        <div>
+          <p><strong>Periodo:</strong> {{ dino.period }} </p>
+          <p><strong>Alimentação: </strong>{{ dino.diet }} </p>
+          <p><strong>Tamanho: </strong>{{ dino.size }} </p>
+          <p><strong>Peso:</strong> {{ dino.weight }} </p>
+          <p><strong>Habitat:</strong> {{ dino.habitat }} </p>
+          <p><strong>Caracteristicas:</strong> {{ dino.characteristics }} </p>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul> 
+</div>
+</div>
+{% endblock %}
